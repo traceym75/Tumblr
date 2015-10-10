@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Yhv-Ph-jnu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="546"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="trending_feed" id="ZXP-q0-dcg">
@@ -41,9 +41,10 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.27450980392156865" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="Yhv-Ph-jnu" id="uru-M8-YQ3"/>
@@ -90,7 +91,7 @@
                                         <state key="normal" image="compose_button"/>
                                         <state key="selected" image="compose_button"/>
                                         <connections>
-                                            <action selector="onComposeButton:" destination="71d-tC-bQc" eventType="touchUpInside" id="ac7-2w-hjN"/>
+                                            <segue destination="jsB-UO-9XK" kind="modal" id="fKW-GI-yBe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b5V-uv-iat">
@@ -125,17 +126,18 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="contentView" destination="EgY-dF-EW8" id="nFi-m1-wHz"/>
+                        <outlet property="homeButton" destination="69s-lk-WAy" id="DJs-w3-vmf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wct-Tm-JD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="-333"/>
+            <point key="canvasLocation" x="894" y="-427"/>
         </scene>
         <!--Compose2 View Controller-->
         <scene sceneID="ncq-Ms-p8P">
             <objects>
                 <viewController storyboardIdentifier="Compose2ViewController" id="jsB-UO-9XK" customClass="Compose2ViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="OVJ-t9-Jak">
+                    <view key="view" alpha="0.75" contentMode="scaleToFill" id="OVJ-t9-Jak">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -170,16 +172,24 @@
                                 <state key="normal" image="video_icon"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XzU-4N-KaF">
-                                <rect key="frame" x="0.0" y="515" width="320" height="53"/>
+                                <rect key="frame" x="0.0" y="516" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="nevermind"/>
                                 <connections>
-                                    <action selector="onNeverMindButton:" destination="jsB-UO-9XK" eventType="touchUpInside" id="mKi-rc-BQk"/>
+                                    <action selector="onNeverMindButton:" destination="jsB-UO-9XK" eventType="touchUpInside" id="pLR-Kd-pPp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.39607843139999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chatImageView" destination="Dur-Uh-PoL" id="vfW-Gq-21p"/>
+                        <outlet property="linkImageView" destination="qZT-9h-4JQ" id="tEA-cQ-12d"/>
+                        <outlet property="photoImageView" destination="dsW-cn-my7" id="sss-7d-cqz"/>
+                        <outlet property="quoteImageView" destination="uCp-n0-Y7W" id="stf-fz-2B0"/>
+                        <outlet property="textImageView" destination="wpy-wr-x0f" id="ZGg-4N-Sg9"/>
+                        <outlet property="videoImageView" destination="JZQ-nM-S7c" id="vg5-ol-r2k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8c-hs-yUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

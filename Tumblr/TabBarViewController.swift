@@ -12,9 +12,10 @@ class TabBarViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var homeButton: UIButton!
+    
     var homeViewController: UIViewController!
     var searchViewController: UIViewController!
-    var compose2ViewController: UIViewController!
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
 
@@ -27,8 +28,6 @@ class TabBarViewController: UIViewController {
         
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
         
-        compose2ViewController = storyboard.instantiateViewControllerWithIdentifier("Compose2ViewController")
-        
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
         
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
@@ -37,7 +36,7 @@ class TabBarViewController: UIViewController {
         
         // Do any additional setup after loading the view.
 
-        // onHomeButton(button: UIButton)
+         onHomeButton(homeButton)
         
     }
 
@@ -53,7 +52,6 @@ class TabBarViewController: UIViewController {
         homeViewController.didMoveToParentViewController(self)
         homeViewController.view.frame = contentView.bounds
         previousButton = button
-        print(button)
         
   }
     
@@ -70,17 +68,6 @@ class TabBarViewController: UIViewController {
         previousButton = button
   }
   
-    @IBAction func onComposeButton(button: UIButton) {
-        if previousButton != nil {
-            previousButton.selected = false
-        }
-        button.selected = true
-        addChildViewController(compose2ViewController)
-        contentView.addSubview(compose2ViewController.view)
-        compose2ViewController.didMoveToParentViewController(self)
-        compose2ViewController.view.frame = contentView.bounds
-        previousButton = button
-    }
     
     
     @IBAction func onAccountButton(button: UIButton) {

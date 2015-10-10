@@ -10,16 +10,42 @@ import UIKit
 
 class Compose2ViewController: UIViewController {
 
+    @IBOutlet weak var textImageView: UIButton!
+    @IBOutlet weak var photoImageView: UIButton!
+    @IBOutlet weak var quoteImageView: UIButton!
+    @IBOutlet weak var linkImageView: UIButton!
+    @IBOutlet weak var chatImageView: UIButton!
+    @IBOutlet weak var videoImageView: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      
+        //tileOneOriginalPosition = tileOneImageView.center
+        
+        UIView.animateWithDuration(0.4, animations: {
+            // This causes first view to fade in and second view to fade out
+            //self.textImageView.alpha = 1
+           // self.photoImageView.alpha = 0
+        })
+        
+        
+        
+        
     }
 
+    @IBAction func onNeverMindButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
 
     /*
