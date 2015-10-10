@@ -1,33 +1,21 @@
 //
-//  HomeViewController.swift
+//  Compose2ViewController.swift
 //  Tumblr
 //
-//  Created by Tracey Ewart on 10/7/15.
+//  Created by Tracey Ewart on 10/9/15.
 //  Copyright © 2015 Tracey Ewart. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    
-    
+class Compose2ViewController: UIViewController {
 
-    @IBOutlet weak var contentView: UIView!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    
-    @IBAction func onHomeTab(sender: AnyObject) {
-        print("Home Tab")
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
