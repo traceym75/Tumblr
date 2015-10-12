@@ -36,7 +36,12 @@ class TabBarViewController: UIViewController {
         
         // Do any additional setup after loading the view.
 
-         onHomeButton(homeButton)
+         // onHomeButton(homeButton)
+        
+        addChildViewController(searchViewController)
+        contentView.addSubview(searchViewController.view)
+        searchViewController.didMoveToParentViewController(self)
+        searchViewController.view.frame = contentView.bounds
         
     }
 
