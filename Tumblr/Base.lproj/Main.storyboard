@@ -91,6 +91,7 @@
                                         <state key="normal" image="compose_button"/>
                                         <state key="selected" image="compose_button"/>
                                         <connections>
+                                            <action selector="onComposeButton:" destination="71d-tC-bQc" eventType="touchUpInside" id="qY6-od-JcC"/>
                                             <segue destination="jsB-UO-9XK" kind="modal" id="fKW-GI-yBe"/>
                                         </connections>
                                     </button>

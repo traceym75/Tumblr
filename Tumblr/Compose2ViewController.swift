@@ -17,26 +17,72 @@ class Compose2ViewController: UIViewController {
     @IBOutlet weak var chatImageView: UIButton!
     @IBOutlet weak var videoImageView: UIButton!
     
+    var textImageViewRestPosition : CGPoint!
+    var photoImageViewRestPosition : CGPoint!
+    var quoteImageViewRestPosition : CGPoint!
+    var linkImageViewRestPosition : CGPoint!
+    var chatImageViewRestPosition : CGPoint!
+    var videoImageViewRestPosition : CGPoint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        textImageViewRestPosition = textImageView.center
+        photoImageViewRestPosition = photoImageView.center
+        quoteImageViewRestPosition = quoteImageView.center
+        linkImageViewRestPosition = linkImageView.center
+        chatImageViewRestPosition = chatImageView.center
+        videoImageViewRestPosition = videoImageView.center
+        
       
-        //tileOneOriginalPosition = tileOneImageView.center
+        textImageView.frame.origin.y = textImageView.frame.origin.y + 400
+        photoImageView.frame.origin.y  = photoImageView.frame.origin.y + 400
+        quoteImageView.frame.origin.y  = quoteImageView.frame.origin.y + 400
+        linkImageView.frame.origin.y  = linkImageView.frame.origin.y + 400
+        chatImageView.frame.origin.y  = chatImageView.frame.origin.y + 400
+        videoImageView.frame.origin.y  = videoImageView.frame.origin.y + 400
+
         
-        UIView.animateWithDuration(0.4, animations: {
-            // This causes first view to fade in and second view to fade out
-            //self.textImageView.alpha = 1
-           // self.photoImageView.alpha = 0
-        })
+        //func viewDidAppear(animated: Bool)  {
+          //  super.viewDidAppear(animated)
         
+            
+            UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                self.textImageView.center = self.textImageViewRestPosition
+            }, completion: nil)
+            UIView.animateWithDuration(0.5, delay: 1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                self.photoImageView.center = self.photoImageViewRestPosition
+            }, completion: nil)
+            
+            
         
-        
+   //  }  // ====== VIEW DID APPEAR END
+
         
     }
 
     @IBAction func onNeverMindButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
+            
+            self.textImageView.center.y = self.textImageView.center.y - 900
+            self.photoImageView.center.y = self.photoImageView.center.y - 500
+            self.quoteImageView.center.y = self.quoteImageView.center.y - 700
+            self.linkImageView.center.y = self.linkImageView.center.y - 1100
+            self.chatImageView.center.y = self.chatImageView.center.y - 1300
+            
+            }) { (completed) -> Void in
+                 self.dismissViewControllerAnimated(true, completion: nil)
+
+        }
+        
+        
+    // Create a viewDidDisappear, and reset the circles positions?  AND get the previous tab bar to highlight again.
+        
+        
+       
     }
     
     override func didReceiveMemoryWarning() {

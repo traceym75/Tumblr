@@ -95,6 +95,15 @@ class TabBarViewController: UIViewController {
         previousButton = button
     }
     
+    @IBAction func onComposeButton(button: UIButton) {
+        if previousButton != nil {
+            previousButton.selected = false
+        }
+        button.selected = true
+        previousButton = button
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
