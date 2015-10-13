@@ -35,21 +35,18 @@ class Compose2ViewController: UIViewController {
         linkImageViewRestPosition = linkImageView.center
         chatImageViewRestPosition = chatImageView.center
         videoImageViewRestPosition = videoImageView.center
-        
       
         textImageView.frame.origin.y = textImageView.frame.origin.y + 400
-        photoImageView.frame.origin.y  = photoImageView.frame.origin.y + 400
-        quoteImageView.frame.origin.y  = quoteImageView.frame.origin.y + 400
-        linkImageView.frame.origin.y  = linkImageView.frame.origin.y + 400
-        chatImageView.frame.origin.y  = chatImageView.frame.origin.y + 400
-        videoImageView.frame.origin.y  = videoImageView.frame.origin.y + 400
+        photoImageView.frame.origin.y = photoImageView.frame.origin.y + 400
+        quoteImageView.frame.origin.y = quoteImageView.frame.origin.y + 400
+        linkImageView.frame.origin.y = linkImageView.frame.origin.y + 400
+        chatImageView.frame.origin.y = chatImageView.frame.origin.y + 400
+        videoImageView.frame.origin.y = videoImageView.frame.origin.y + 400
 
-        
     }
     
     override func viewWillAppear(animated: Bool)  {
         super.viewWillAppear(animated)
-        
         
         UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.textImageView.center = self.textImageViewRestPosition
@@ -71,17 +68,8 @@ class Compose2ViewController: UIViewController {
             }, completion: nil)
         
         
-    }  // ====== VIEW DID APPEAR END
-    
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-            self.textImageView.center = self.textImageViewRestPosition
-            }, completion: nil)
-        
     }
+    
 
     @IBAction func onNeverMindButton(sender: AnyObject) {
         
