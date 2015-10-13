@@ -51,22 +51,22 @@ class Compose2ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         
-        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.textImageView.center = self.textImageViewRestPosition
             }, completion: nil)
-        UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.photoImageView.center = self.photoImageViewRestPosition
             }, completion: nil)
-        UIView.animateWithDuration(0.5, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.quoteImageView.center = self.quoteImageViewRestPosition
             }, completion: nil)
-        UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0.4, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.linkImageView.center = self.linkImageViewRestPosition
             }, completion: nil)
-        UIView.animateWithDuration(0.5, delay: 0.3, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0.3, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.chatImageView.center = self.chatImageViewRestPosition
             }, completion: nil)
-        UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.videoImageView.center = self.videoImageViewRestPosition
             }, completion: nil)
         

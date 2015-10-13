@@ -137,8 +137,8 @@
         <!--Compose2 View Controller-->
         <scene sceneID="ncq-Ms-p8P">
             <objects>
-                <viewController storyboardIdentifier="Compose2ViewController" id="jsB-UO-9XK" customClass="Compose2ViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="OVJ-t9-Jak">
+                <viewController storyboardIdentifier="Compose2ViewController" modalPresentationStyle="overCurrentContext" id="jsB-UO-9XK" customClass="Compose2ViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="OVJ-t9-Jak">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -175,13 +175,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XzU-4N-KaF">
                                 <rect key="frame" x="0.0" y="516" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.23137254901960785" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="nevermind"/>
                                 <connections>
                                     <action selector="onNeverMindButton:" destination="jsB-UO-9XK" eventType="touchUpInside" id="pLR-Kd-pPp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1960784314" green="0.39607843139999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14869993970420683" green="0.30150851517548888" blue="0.41573257855454537" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="chatImageView" destination="Dur-Uh-PoL" id="vfW-Gq-21p"/>
