@@ -15,7 +15,7 @@ Time: I spent around 6 hours, and was able to complete 1 optional task.
 
 Walkthrough of all the app stories:
 
-![Video Walkthrough](tumbor-homework-demo.gif)
+![Video Walkthrough](tumblr-homework-demo.gif)
 
 
  
