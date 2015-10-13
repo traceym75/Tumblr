@@ -48,7 +48,7 @@ class Compose2ViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool)  {
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
         
         
         UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
@@ -74,9 +74,8 @@ class Compose2ViewController: UIViewController {
     }  // ====== VIEW DID APPEAR END
     
     
-    override func viewDidDisappear(animated: Bool)  {
-        super.viewDidAppear(animated)
-        
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.textImageView.center = self.textImageViewRestPosition
@@ -95,16 +94,11 @@ class Compose2ViewController: UIViewController {
             self.chatImageView.center.y = self.chatImageView.center.y - 1400
             self.videoImageView.center.y = self.videoImageView.center.y - 1000
             
-            
             }) { (completed) -> Void in
                  self.dismissViewControllerAnimated(true, completion: nil)
 
         }
-        
-        
-    // Create a viewDidDisappear, and reset the circles positions?  AND get the previous tab bar to highlight again.
-        
-        
+
        
     }
     
@@ -112,9 +106,7 @@ class Compose2ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
+
     
 
     /*
